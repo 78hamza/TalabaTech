@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+</head>
+
+<body>
+    <h1>Courses Page</h1>
+    <div id="selected-courses">
+        <!-- Courses will be shown here based on filiere and semester -->
+    </div>
+
+    <script>
+        // Function to get query parameters from URL
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                filiere: params.get('filiere'),
+                semester: params.get('semester')
+            };
+        }
+
+        // Display courses based on filiere and semester
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = getQueryParams();
+            const filiere = params.filiere;
+            const semester = params.semester;
+
+            const courseData = {
+                'PA': {
+                    'Semester 1': ['Thermodynamique', 'Thermochimie', 'Mecanique de point', 'Analyse', 'Langue etranger', 'Power skills:MTU'],
+                    'Semester 2': ['Algebre', 'Optique geometrique', 'Electrostatique et Magnetostatique', 'Chimie en solution', 'Langue etranger', 'Power skills:digital skills'],
+                    'Semester 3': ['Mecanique du solide', 'Circuit electrique', 'Electromagnetisme', 'Mathematique pour la physique', 'Algorithme et programmation python', 'Langue etranger', 'Power skills:Competence culturelle et artistiques']
+                },
+                'IME': {
+                    'Semester 1': ['Thermodynamique', 'Thermochimie', 'Mecanique de point', 'Analyse', 'Langue etranger', 'Power skills:MTU'],
+                    'Semester 2': ['Algebre', 'Optique geometrique', 'Electrostatique et Magnetostatique', 'Chimie en solution', 'Langue etranger', 'Power skills:digital skills'],
+                    'Semester 3': ['Mecanique du solide', 'Circuit electrique', 'Electromagnetisme', 'Mathematique pour la physique', 'Algorithme et programmation python', 'Langue etranger', 'Power skills:Competence culturelle et artistiques']
+                },
+                'BSE': {
+                    'Semester 1': ['Principles of Management', 'Accounting 101'],
+                    'Semester 2': ['Marketing', 'Finance']
+                }
+                // Add more filiere and semester data here
+            };
+
+            if (filiere && semester && courseData[filiere] && courseData[filiere][semester]) {
+                const courses = courseData[filiere][semester];
+                const courseList = document.getElementById('selected-courses');
+
+                courses.forEach(course => {
+                    const courseItem = document.createElement('p');
+                    courseItem.textContent = course;
+                    courseList.appendChild(courseItem);
+                });
+            } else {
+                document.getElementById('selected-courses').textContent = 'No courses available for the selected filiere and semester.';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    /* background-image: url('https://www.leconomiste.com/sites/default/files/eco7/public/universite_abdelmalek_essaidi_tetouan_trt.jpg'); Add your background image path here */
+    background-size: cover; /* Ensures the image covers the whole page */
+    background-position: center; /* Center the image */
+    color: #333;
+    background-color: rgb(210, 235, 235);
+    text-align: center;
+}
+
+.header {
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+    color: white;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    justify-content: center; /* Center buttons horizontally */
+    margin-top: 20px; /* Add some space from the content */
+}
+
+.button {
+    background-color: #007BFF; /* Button color */
+    font-weight: bold;
+    font-size: large;
+    color: white; /* Button text color */
+    padding: 20px; /* Make the buttons square */
+    width: 150px; /* Set a fixed width for square shape */
+    height: 150px; /* Set a fixed height for square shape */
+    text-decoration: none; /* Remove underline */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px; /* Space between buttons */
+    display: flex; /* Flexbox for centering text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+    text-align: center; /* Center text */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+.button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+header {
+    background-color: #007BFF; /* Same color as buttons */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    
+    
+}
+.logo_image{
+    height: 70px;
+
+
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline; /* Display links horizontally */
+    margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    min-height: 100vh; /* Minimum height of the body */
+    margin: 0; /* Remove default margin */
+}
+
+.content {
+    flex: 1; /* Allow content to grow and take up available space */
+}
+
+footer {
+    background-color: #f1f1f1; /* Light gray */
+    color: #333; /* Dark gray text */
+    text-align: center;
+    padding: 15px;
+    width: 100%; /* Make footer full-width */
+    bottom: 0; /* Stick to the bottom */
+}
+
